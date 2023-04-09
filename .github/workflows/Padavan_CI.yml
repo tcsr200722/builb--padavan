@@ -65,6 +65,8 @@ jobs:
             targets: "K2P K2P-5.0"
           - build_variant: "mt7628"
             targets: "HC5761A"
+          - build_variant: "mt7620"
+            targets: "HC5861"
     steps:
       - name: Checkout ad              # 导入主分支
         uses: actions/checkout@main
