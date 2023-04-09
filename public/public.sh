@@ -4,8 +4,8 @@
 
 user_name="admin"                        # 用户名 admin
 user_password=$user_name                 # 用户密码 admin
-lan_ip="192.168.2"                       # lan 地址 192.168.2.1 一定别写后面的 .1
-wifi_password="1234567890"               # wifi密码，切记密码最少8位 admin
+lan_ip="10.10.10"                        # lan 地址 192.168.2.1 一定别写后面的 .1
+wifi_password="haierdianqi123"               # wifi密码，切记密码最少8位 admin
 version_time=$(date "+%Y%m%d")           # 自动时间更新时版本号: 20200320
 default_path="./user/shared/defaults.h"  # 默认文件配置目录
 
@@ -52,19 +52,19 @@ sed -i "s/FIRMWARE_BUILDS_REV=[0-9]*/FIRMWARE_BUILDS_REV=$version_time/g" ./vers
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SFTP=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config
-        echo "#CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config
+        echo "#CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config
 
